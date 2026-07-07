@@ -1,0 +1,88 @@
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.panel {
+  background: light-dark(#ffffff, #1e2126);
+  border: 1px solid light-dark(#e0e0e6, #2c2f36);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid light-dark(#e0e0e6, #2c2f36);
+}
+
+.transfer-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+.transfer-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+  flex: 1 1 160px;
+}
+
+.transfer-form select,
+.transfer-form input {
+  padding: 0.4rem 0.5rem;
+  font-size: 1rem;
+}
+
+.transfer-form button {
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.transfer-form button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.success-message {
+  color: #1a7f37;
+  font-weight: 500;
+}
+
+.error-message {
+  color: #cf222e;
+  font-weight: 500;
+}
+
+.status-badge {
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.status-success {
+  background: #d9f2e3;
+  color: #1a7f37;
+}
+
+.status-failed {
+  background: #fbe0df;
+  color: #cf222e;
+}

@@ -28,5 +28,18 @@ services:
       sqlserver:
         condition: service_healthy
 
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        # The browser (not other containers) is what calls this URL, so it
+        # must be the host-mapped API port, not the "api" service name.
+        VITE_API_BASE_URL: "http://localhost:8080/api"
+    container_name: moneytransfer-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - api
+
 volumes:
   sqlserver-data:
