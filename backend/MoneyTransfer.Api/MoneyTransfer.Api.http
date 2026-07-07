@@ -1,0 +1,22 @@
+@MoneyTransfer.Api_HostAddress = http://localhost:5199
+
+GET {{MoneyTransfer.Api_HostAddress}}/api/accounts
+Accept: application/json
+
+###
+
+GET {{MoneyTransfer.Api_HostAddress}}/api/transactions
+Accept: application/json
+
+###
+
+POST {{MoneyTransfer.Api_HostAddress}}/api/transfer
+Content-Type: application/json
+
+{
+  "fromAccountId": 1,
+  "toAccountId": 2,
+  "amount": 100.00
+}
+
+###
